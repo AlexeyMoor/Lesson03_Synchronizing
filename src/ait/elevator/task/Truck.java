@@ -3,9 +3,9 @@ package ait.elevator.task;
 import ait.elevator.model.Elevator;
 
 public class Truck implements Runnable {
-    private int nRaces;
-    private int capacity; // in kg
-    private Elevator elevator;
+    private final int nRaces;
+    private final int capacity; // in kg
+    private final Elevator elevator;
 
     public Truck(int nRaces, int capacity, Elevator elevator) {
         this.nRaces = nRaces;
