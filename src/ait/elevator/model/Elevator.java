@@ -12,7 +12,7 @@ public class Elevator {
         return name;
     }
 
-    public int getCurrentVolume() {
+    public synchronized int getCurrentVolume() {
         return currentVolume;
     }
 
@@ -21,6 +21,6 @@ public class Elevator {
     }
 
     public synchronized void add(int portion) {
-        currentVolume += portion;
+        currentVolume = getCurrentVolume() + portion;
     }
 }
