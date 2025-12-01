@@ -2,8 +2,6 @@ package ait.volatiles.task;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import static java.lang.reflect.Array.set;
-
 public class InfiniteLoop implements Runnable {
     private AtomicBoolean flag = new AtomicBoolean(true);
 
