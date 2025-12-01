@@ -24,4 +24,3 @@ public class Elevator {
         currentVolume += portion;
     }
 }
-
