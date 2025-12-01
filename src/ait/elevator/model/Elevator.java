@@ -1,10 +1,8 @@
 package ait.elevator.model;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 public class Elevator {
     private String name;
-    private final AtomicInteger currentVolume = new AtomicInteger(0);
+    private int currentVolume;
 
     public Elevator(String name) {
         this.name = name;
@@ -15,7 +13,7 @@ public class Elevator {
     }
 
     public int getCurrentVolume() {
-        return currentVolume.get();
+        return currentVolume;
     }
 
     public void setName(String name) {
@@ -23,6 +21,7 @@ public class Elevator {
     }
 
     public void add(int portion) {
-        currentVolume.addAndGet(portion);
+        currentVolume += portion;
     }
 }
+
